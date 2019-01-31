@@ -78,6 +78,7 @@
   <ItemGroup>
     <Compile Include="Agents.cs" />
     <Compile Include="AgentsDB.cs" />
+    <Content Include="App_Code\BookingDB.cs" />
     <Compile Include="CustomerRegisteration.aspx.cs">
       <DependentUpon>CustomerRegisteration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -96,7 +97,6 @@
     </Compile>
     <Compile Include="TravelExpertsConnectDB.cs" />
     <Content Include="App_Code\Booking.cs" />
-    <Content Include="App_Code\BookingDetails.cs" />
     <Content Include="App_Code\Customer.cs" />
     <Content Include="App_Code\CustomerDB.cs" />
     <Content Include="App_Code\TravelExpertsConnectDB.cs" />
