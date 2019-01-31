@@ -94,12 +94,11 @@
     <Compile Include="RegistrationConfirmaton.aspx.designer.cs">
       <DependentUpon>RegistrationConfirmaton.aspx</DependentUpon>
     </Compile>
-    <Compile Include="TravelExpertsConnectDB.cs" />
+    <Compile Include="App_Code\TravelExpertsConnectDB.cs" />
     <Content Include="App_Code\Booking.cs" />
     <Content Include="App_Code\BookingDetails.cs" />
     <Content Include="App_Code\Customer.cs" />
     <Content Include="App_Code\CustomerDB.cs" />
-    <Content Include="App_Code\TravelExpertsConnectDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
