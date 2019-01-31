@@ -76,8 +76,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Agents.cs" />
-    <Compile Include="AgentsDB.cs" />
+    <Compile Include="App_Code\Agents.cs" />
+    <Compile Include="App_Code\AgentsDB.cs" />
     <Compile Include="CustomerRegisteration.aspx.cs">
       <DependentUpon>CustomerRegisteration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -85,8 +85,8 @@
     <Compile Include="CustomerRegisteration.aspx.designer.cs">
       <DependentUpon>CustomerRegisteration.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Customers.cs" />
-    <Compile Include="CustomersDB.cs" />
+    <Compile Include="App_Code\Customers.cs" />
+    <Compile Include="App_Code\CustomersDB.cs" />
     <Compile Include="RegistrationConfirmaton.aspx.cs">
       <DependentUpon>RegistrationConfirmaton.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

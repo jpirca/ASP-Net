@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace TravelExpertsFront
+namespace TravelExpertsFront.App_Code
 {
     /*Class to make its associated data access class ready to popuplate Agents into a drop down list
      Author:Muahmmad Islam

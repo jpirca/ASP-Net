@@ -6,7 +6,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace TravelExpertsFront
+namespace TravelExpertsFront.App_Code
 {
     /*Class to get data from customerRegistration form, initialize member variable of Customers
          * Class to make it ready to send into database

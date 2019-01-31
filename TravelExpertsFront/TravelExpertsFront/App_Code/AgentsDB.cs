@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
-namespace TravelExpertsFront
+namespace TravelExpertsFront.App_Code
 {
     /*Class to return agents in form of list object connected to a drop dwon list named drpAgents, using object data source
      * Author:Muhammad Islam

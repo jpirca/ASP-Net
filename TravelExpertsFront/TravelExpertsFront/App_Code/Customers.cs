@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace TravelExpertsFront
+namespace TravelExpertsFront.App_Code
 {
     /*Class to define varaibles for all data columns of Customers Table, in order to send data to database using
      its object
