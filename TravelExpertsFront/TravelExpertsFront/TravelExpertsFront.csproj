@@ -99,9 +99,81 @@
     <Content Include="App_Code\Booking.cs" />
     <Content Include="App_Code\Customer.cs" />
     <Content Include="App_Code\CustomerDB.cs" />
+    <Content Include="App_Code\TravelExpertsConnectDB.cs" />
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Dashboard\Dashoboard.Master" />
+    <Content Include="Assets\fonts\themify.eot" />
+    <Content Include="Assets\fonts\themify.ttf" />
+    <Content Include="Assets\fonts\themify.woff" />
+    <Content Include="Assets\sass\paper-dashboard.scss" />
+    <Content Include="Assets\sass\paper\_alerts.scss" />
+    <Content Include="Assets\sass\paper\_animated-buttons.scss" />
+    <Content Include="Assets\sass\paper\_buttons.scss" />
+    <Content Include="Assets\sass\paper\_cards.scss" />
+    <Content Include="Assets\sass\paper\_carousel.scss" />
+    <Content Include="Assets\sass\paper\_chat-message.scss" />
+    <Content Include="Assets\sass\paper\_checkbox-radio.scss" />
+    <Content Include="Assets\sass\paper\_circlechart.scss" />
+    <Content Include="Assets\sass\paper\_collapse.scss" />
+    <Content Include="Assets\sass\paper\_dropdown.scss" />
+    <Content Include="Assets\sass\paper\_footers.scss" />
+    <Content Include="Assets\sass\paper\_forms.scss" />
+    <Content Include="Assets\sass\paper\_inputs.scss" />
+    <Content Include="Assets\sass\paper\_labels.scss" />
+    <Content Include="Assets\sass\paper\_media.scss" />
+    <Content Include="Assets\sass\paper\_misc.scss" />
+    <Content Include="Assets\sass\paper\_mixins.scss" />
+    <Content Include="Assets\sass\paper\_modal.scss" />
+    <Content Include="Assets\sass\paper\_navbars.scss" />
+    <Content Include="Assets\sass\paper\_pages.scss" />
+    <Content Include="Assets\sass\paper\_progress-bars.scss" />
+    <Content Include="Assets\sass\paper\_responsive.scss" />
+    <Content Include="Assets\sass\paper\_sidebar-and-main-panel.scss" />
+    <Content Include="Assets\sass\paper\_sliders.scss" />
+    <Content Include="Assets\sass\paper\_social.scss" />
+    <Content Include="Assets\sass\paper\_switch.scss" />
+    <Content Include="Assets\sass\paper\_tables.scss" />
+    <Content Include="Assets\sass\paper\_tabs-navs-pagination.scss" />
+    <Content Include="Assets\sass\paper\_tags.scss" />
+    <Content Include="Assets\sass\paper\_timeline.scss" />
+    <Content Include="Assets\sass\paper\_tooltips-and-popovers.scss" />
+    <Content Include="Assets\sass\paper\_typography.scss" />
+    <Content Include="Assets\sass\paper\_variables.scss" />
+    <Content Include="Assets\sass\paper\plugins\_animate.scss" />
+    <Content Include="Assets\sass\paper\plugins\_bootstrap-select.scss" />
+    <Content Include="Assets\sass\paper\plugins\_bootstrap-table.scss" />
+    <Content Include="Assets\sass\paper\plugins\_chartist.scss" />
+    <Content Include="Assets\sass\paper\plugins\_datatables.net.scss" />
+    <Content Include="Assets\sass\paper\plugins\_datetime-picker.scss" />
+    <Content Include="Assets\sass\paper\plugins\_fullcalendar.scss" />
+    <Content Include="Assets\sass\paper\plugins\_jquery.jvectormap.scss" />
+    <Content Include="Assets\sass\paper\plugins\_nouislider.scss" />
+    <Content Include="Assets\sass\paper\plugins\_perfect-scrollbar.scss" />
+    <Content Include="Assets\sass\paper\plugins\_sweetalert2.scss" />
+    <Content Include="Assets\sass\paper\mixins\_alerts.scss" />
+    <Content Include="Assets\sass\paper\mixins\_buttons.scss" />
+    <Content Include="Assets\sass\paper\mixins\_cards.scss" />
+    <Content Include="Assets\sass\paper\mixins\_chartist.scss" />
+    <Content Include="Assets\sass\paper\mixins\_icons.scss" />
+    <Content Include="Assets\sass\paper\mixins\_inputs.scss" />
+    <Content Include="Assets\sass\paper\mixins\_labels.scss" />
+    <Content Include="Assets\sass\paper\mixins\_navbars.scss" />
+    <Content Include="Assets\sass\paper\mixins\_sidebar.scss" />
+    <Content Include="Assets\sass\paper\mixins\_social.scss" />
+    <Content Include="Assets\sass\paper\mixins\_table-row.scss" />
+    <Content Include="Assets\sass\paper\mixins\_tabs.scss" />
+    <Content Include="Assets\sass\paper\mixins\_tags.scss" />
+    <Content Include="Assets\sass\paper\mixins\_transparency.scss" />
+    <Content Include="Assets\sass\paper\mixins\_vendor-prefixes.scss" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
