@@ -67,13 +67,7 @@
 	                    <div class="collapse" id="collapseExample">
 	                        <ul class="nav">
 	                            <li>
-									<a href="#profile">
-										<span class="sidebar-mini">Mp</span>
-										<span class="sidebar-normal">My Profile</span>
-									</a>
-								</li>
-	                            <li>
-									<a href="#edit"> 
+									<a href="EditProfile.aspx"> 
 										<span class="sidebar-mini">Ep</span>
 										<span class="sidebar-normal">Edit Profile</span>
 									</a>
@@ -84,7 +78,6 @@
 										<span class="sidebar-normal">Logout</span>
 									</a>
 								</li>
-	                            
 	                        </ul>
 	                    </div>
 	                </div>
@@ -106,7 +99,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="../dashboard/Orders.aspx">
+									<a href="OrderHistory.aspx">
 										<span class="sidebar-mini">O</span>
 										<span class="sidebar-normal">Order History</span>
 									</a>

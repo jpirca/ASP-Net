@@ -63,8 +63,8 @@
                 	<div class="row">
                     	<div class="col-md-8 col-md-offset-2">
                         	<div class="header-text">
-                            	<h2>Paper Dashboard PRO</h2>
-                            	<h4>Register for free and experience the dashboard today.</h4>
+                            	<h2>Travel Experts</h2>
+                            	<h4>Register for free and experience the journey.</h4>
                             	<hr>
                         	</div>
                     	</div>
