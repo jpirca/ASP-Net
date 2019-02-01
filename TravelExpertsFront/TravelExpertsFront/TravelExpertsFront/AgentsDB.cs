@@ -6,9 +6,10 @@ using System.Web;
 
 namespace TravelExpertsFront
 {
-    /*Class to return agents in form of list object connected to a drop dwon list named drpAgents, using object data source
+    /* This class to return agents in form of list object connected to a drop dwon list named drpAgents, using object data source
      * Author:Muhammad Islam
-     * Created:Jan, 2019*/
+     * Created:Jan, 2019
+     */
     public class AgentsDB
     {
         //Function returns list of Agents in form of Agents Class object to drop down name drpAgents
