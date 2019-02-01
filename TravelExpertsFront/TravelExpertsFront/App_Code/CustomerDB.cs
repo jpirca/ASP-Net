@@ -6,7 +6,7 @@ using System.Web;
 
 namespace TravelExpertsFront.App_Code
 {
-    public static class CustomerDB
+    public class CustomerDB
     {
         public static bool RegisterCustomer()
         {

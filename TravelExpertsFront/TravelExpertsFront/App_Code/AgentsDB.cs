@@ -6,12 +6,8 @@ using System.Web;
 
 namespace TravelExpertsFront.App_Code
 {
-    /*Class to return agents in form of list object connected to a drop dwon list named drpAgents, using object data source
-     * Author:Muhammad Islam
-     * Created:Jan, 2019*/
     public class AgentsDB
     {
-        //Function returns list of Agents in form of Agents Class object to drop down name drpAgents
         public static List<Agents> GetAgents()
         {
             List<Agents> agents = new List<Agents>(); // empty list
@@ -35,7 +31,7 @@ namespace TravelExpertsFront.App_Code
                 while (reader.Read()) // while there are customers
                 {
                     agentsobj = new Agents();
-                   agentsobj.agentID= (int)reader["AgentId"];
+                    agentsobj.agentID = (int)reader["AgentId"];
                     agentsobj.Name = reader["AgtFirstName"].ToString();
                     agents.Add(agentsobj);
                 }

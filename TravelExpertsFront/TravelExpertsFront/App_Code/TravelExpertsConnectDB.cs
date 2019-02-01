@@ -5,12 +5,9 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
-namespace TravelExpertsFront
+namespace TravelExpertsFront.App_Code
 {
-    /*Class to make a connection to TravlesExperts database locally, and facilitate other classes with connection
-     Author: Muhammad Islam
-     Date: Jan, 2019*/
-    public static class TravelExpertsConnectDB
+    public class TravelExpertsConnectDB
     {
         public static SqlConnection GetConnection()
         {

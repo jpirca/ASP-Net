@@ -5,7 +5,6 @@ using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using TravelExpertsFront.App_Code;
 
 namespace TravelExpertsFront
 {
@@ -71,25 +70,25 @@ namespace TravelExpertsFront
             }
             else
             {
-                CustomersDB regObj = new CustomersDB();
-                string firstName = txtFirstName.Text;
-                string lastName = txtLastName.Text;
-                string custAddress = txtAddress.Text;
-                string custCity = txtCity.Text;
-                string custProvice = txtProvince.Text;
-                string custPostalcode = txtPostalCode.Text;
-                string custCountry = txtCountry.Text;
-                string custHomePhone = txtHomePhone.Text;
-                string custBusinessPhone = txtBusPhone.Text;
-                string custEmail = txtEmail.Text;
-                string custAgent = drpAgents.Text;
+                //CustomersDB1 regObj = new CustomersDB1();
+                //string firstName = txtFirstName.Text;
+                //string lastName = txtLastName.Text;
+                //string custAddress = txtAddress.Text;
+                //string custCity = txtCity.Text;
+                //string custProvice = txtProvince.Text;
+                //string custPostalcode = txtPostalCode.Text;
+                //string custCountry = txtCountry.Text;
+                //string custHomePhone = txtHomePhone.Text;
+                //string custBusinessPhone = txtBusPhone.Text;
+                //string custEmail = txtEmail.Text;
+                //string custAgent = drpAgents.Text;
 
-                if (regObj.RegisterCustomer(firstName,lastName,custAddress,custCity,custProvice,custPostalcode,
-                    custCountry,custHomePhone,custBusinessPhone,custEmail,Convert.ToInt32(custAgent)))
-                {
+                //if (regObj.RegisterCustomer(firstName,lastName,custAddress,custCity,custProvice,custPostalcode,
+                //    custCountry,custHomePhone,custBusinessPhone,custEmail,Convert.ToInt32(custAgent)))
+                //{
                     
-                    Response.Redirect("RegistrationConfirmaton.aspx");
-                }
+                //    Response.Redirect("RegistrationConfirmaton.aspx");
+                //}
             }
 
         }

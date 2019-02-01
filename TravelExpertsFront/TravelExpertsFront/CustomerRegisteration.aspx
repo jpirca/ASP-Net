@@ -107,7 +107,7 @@
                     <div class="col-12">
                          <asp:Label ID="lblAgent" runat="server" class="lablestyle">Agent</asp:Label>
                         <asp:DropDownList ID="drpAgents" runat="server" class="form-control" DataSourceID="ObjectDataSource1" DataTextField="Name" DataValueField="agentID"></asp:DropDownList>
-                         <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="GetAgents" TypeName="TravelExpertsFront.AgentsDB"></asp:ObjectDataSource>
+                         <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="GetAgents" TypeName="TravelExpertsFront.App_Code.AgentsDB"></asp:ObjectDataSource>
                          <br />
                          </div>
                     <%--    <div class="col-2"> </div>
