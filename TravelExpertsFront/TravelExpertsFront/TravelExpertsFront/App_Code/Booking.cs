@@ -7,13 +7,14 @@ namespace TravelExpertsFront.App_Code
 {
     public class Booking
     {
-        public Booking() { }
-        public int BookingId { get; set; }
-        public DateTime BookingDate { get; set; }
-        public string BookingNo { get; set; }
-        public decimal TravelerCount { get; set; }
-        public int CustomerId { get; set; }
-        public char TripTypeId { get; set; }
-        public int PackageId { get; set; }
+        public Booking() { }                            // Constructor
+        public int BookingId { get; set; }              // Booking Id
+        public int CustomerId { get; set; }             // Customer Id
+        public DateTime BookingDate { get; set; }       // Booking Date
+        public string BookingNo { get; set; }           // Booking Number
+        public decimal TravelerCount { get; set; }      // Travel Count
+        public char TripTypeId { get; set; }            // Trip Type ID
+        public string TTName { get; set; }              // Trip Type Name
+        public List<BookingDetails> BookingDetails { get; set; } // Booking Detail List
     }
 }

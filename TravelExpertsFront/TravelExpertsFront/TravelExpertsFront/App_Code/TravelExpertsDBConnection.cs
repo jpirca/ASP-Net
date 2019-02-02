@@ -7,7 +7,7 @@ using System.Web;
 
 namespace TravelExpertsFront.App_Code
 {
-    public static class TravelExpertsConnectDB
+    public class TravelExpertsDBConnection
     {
         public static SqlConnection GetConnection()
         {
