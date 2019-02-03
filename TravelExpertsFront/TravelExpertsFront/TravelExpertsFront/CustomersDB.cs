@@ -14,6 +14,19 @@ namespace TravelExpertsFront
          Created:Jan,2019*/
     public class CustomersDB
     {
+        public string firstName { get; set; }
+        public string lastName { get; set; }
+        public string Address { get; set; }
+        public string City { get; set; }
+        public string Prov { get; set; }
+        public string Postal { get; set; }
+        public string Country { get; set; }
+        public string homePhoe { get; set; }
+        public string busPhone { get; set; }
+        public string Email { get; set; }
+        // public int Agent { get; set; }
+        //  public string CustLoginName { get; set; }
+        public string Password { get; set; }
         /*Function gets data from customerRegistration form, and submit into data base,
          returns true if submission is successful otherwise will return false*/
         public bool RegisterCustomer(string fName,string lName,string address,string city,string province,
@@ -123,6 +136,116 @@ namespace TravelExpertsFront
               
             }
             return isValidUser;
+        }
+        //Function to get data into form for update profile purpose
+        public void fetchDataIntoForm(int CustId)
+        {
+
+            using (SqlConnection connection = new SqlConnection(TravelExpertsConnectDB.GetConnectionString()))
+            {
+                // define the select query command
+                string selectQuery = "select CustFirstName,CustLastName,CustAddress,CustCity,CustProv" +
+                    ",CustPostal,CustCountry,CustHomePhone,CustBusPhone,CustEmail from" +
+                    " Customers where CustomerId=@custid";
+                SqlCommand selectCommand = new SqlCommand(selectQuery, connection);
+                selectCommand.Parameters.AddWithValue("@custid", CustId);
+                try
+                {
+                    // open the connection
+                    connection.Open();
+
+                    // execute the query
+                    SqlDataReader reader = selectCommand.ExecuteReader(); // can be multiple records
+
+                    // process the results
+                    while (reader.Read()) // while there are customers
+                    {
+
+                        firstName = reader["CustFirstName"].ToString();
+                        lastName = reader["CustLastName"].ToString();
+                        Address = reader["CustAddress"].ToString();
+                        City = reader["CustCity"].ToString();
+                        Prov = reader["CustProv"].ToString();
+                        Postal = reader["CustPostal"].ToString();
+                        Country = reader["CustCountry"].ToString();
+                        homePhoe = reader["CustHomePhone"].ToString();
+                        busPhone = reader["CustBusPhone"].ToString();
+                        Email = reader["CustEmail"].ToString();
+                        // Password = reader["CustPassword"].ToString();
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw ex; // let the form handle it
+                }
+
+            }
+
+        }
+        //function to update profile
+        public bool UpdateUserProfile(string ProfName, string ProflName, string Profaddress, string Profcity, string Profprovince,
+           string Profpostalcode, string Profcountry, string Profhomephone, string Profbusinessphone,
+           string Profemail,int CustId)
+        {
+            bool custUpadated = false;
+            firstName = ProfName;
+            lastName = ProflName;
+            Address = Profaddress;
+            City = Profcity;
+            Prov = Profprovince;
+            Postal = Profpostalcode;
+            Country = Profcountry;
+            homePhoe = Profhomephone;
+            busPhone = Profbusinessphone;
+            Email = Profemail;
+           // Password = ProfCustPassword;
+
+            string query = "update Customers set CustFirstName=@profName , CustLastName=@proflname ," +
+                " CustAddress=@profaddress , CustCity=@profcity , CustProv=@profprovince , CustPostal=@profpostal , " +
+                " CustCountry=@profcountry , CustHomePhone=@profhomephone , CustBusPhone=@profbusinphone , " +
+                " CustEmail=@profemail  where CustomerId=@profid";
+            //Define the parameters
+            using (SqlConnection connection = new SqlConnection(TravelExpertsConnectDB.GetConnectionString()))
+            {
+                SqlCommand cmd = new SqlCommand(query, connection);
+
+                cmd.Parameters.AddWithValue("@profName", firstName);
+                cmd.Parameters.AddWithValue("@proflname", lastName);
+                cmd.Parameters.AddWithValue("@profaddress", Address);
+                cmd.Parameters.AddWithValue("@profcity", City);
+                cmd.Parameters.AddWithValue("@profprovince", Prov);
+                cmd.Parameters.AddWithValue("@profpostal", Postal);
+                cmd.Parameters.AddWithValue("@profcountry", Country);
+                cmd.Parameters.AddWithValue("@profhomephone", homePhoe);
+                cmd.Parameters.AddWithValue("@profbusinphone", busPhone);
+                cmd.Parameters.AddWithValue("@profemail", Email);
+               // cmd.Parameters.AddWithValue("@profpassword", Password);
+                cmd.Parameters.AddWithValue("@profid", CustId);
+
+                try
+                {
+                    connection.Open();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        custUpadated = true;
+                    }
+
+                }
+                catch (SqlException e)
+                {
+                    throw e;
+
+                }
+                //finally
+                //{
+                //    connection.Close();
+
+                //}
+            }
+
+            return custUpadated;
         }
     }
 }

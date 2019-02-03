@@ -70,6 +70,7 @@
     <Content Include="bootstrap\bootstrap.min.css" />
     <Content Include="bootstrap\bootstrap.min.js" />
     <Content Include="bootstrap\jquery.js" />
+    <Content Include="CustEditProfile.aspx" />
     <Content Include="CustomerRegisteration.aspx" />
     <Content Include="OrderHistory.aspx" />
     <Content Include="RegistrationConfirmaton.aspx" />
@@ -80,6 +81,13 @@
     <Compile Include="Agents.cs" />
     <Compile Include="AgentsDB.cs" />
     <Compile Include="App_Code\BookingDB.cs" />
+    <Compile Include="CustEditProfile.aspx.cs">
+      <DependentUpon>CustEditProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustEditProfile.aspx.designer.cs">
+      <DependentUpon>CustEditProfile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CustomerRegisteration.aspx.cs">
       <DependentUpon>CustomerRegisteration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
