@@ -11,7 +11,7 @@ namespace TravelExpertsFront.App_Code
         public static bool RegisterCustomer()
         {
             bool custRisgered = false;
-            SqlConnection connection = TravelExpertsConnectDB.GetConnection();
+            SqlConnection connection = TravelExpertsDBConnection.GetConnection();
             Customer custObj = new Customer();
             custObj.CustFirstName = "Muhammad";
             custObj.CustLastName = "Islam";
