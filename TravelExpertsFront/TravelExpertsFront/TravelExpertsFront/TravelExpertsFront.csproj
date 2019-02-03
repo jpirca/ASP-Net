@@ -71,6 +71,7 @@
     <Content Include="bootstrap\bootstrap.min.js" />
     <Content Include="bootstrap\jquery.js" />
     <Content Include="CustomerRegisteration.aspx" />
+    <Content Include="OrderHistory.aspx" />
     <Content Include="RegistrationConfirmaton.aspx" />
     <Content Include="stylesheet\travelExpertsStyles.css" />
     <Content Include="Web.config" />
@@ -78,6 +79,7 @@
   <ItemGroup>
     <Compile Include="Agents.cs" />
     <Compile Include="AgentsDB.cs" />
+    <Compile Include="App_Code\BookingDB.cs" />
     <Compile Include="CustomerRegisteration.aspx.cs">
       <DependentUpon>CustomerRegisteration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -87,6 +89,13 @@
     </Compile>
     <Compile Include="Customers.cs" />
     <Compile Include="CustomersDB.cs" />
+    <Compile Include="OrderHistory.aspx.cs">
+      <DependentUpon>OrderHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderHistory.aspx.designer.cs">
+      <DependentUpon>OrderHistory.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RegistrationConfirmaton.aspx.cs">
       <DependentUpon>RegistrationConfirmaton.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -95,11 +104,11 @@
       <DependentUpon>RegistrationConfirmaton.aspx</DependentUpon>
     </Compile>
     <Compile Include="TravelExpertsConnectDB.cs" />
-    <Content Include="App_Code\Booking.cs" />
-    <Content Include="App_Code\BookingDetails.cs" />
+    <Compile Include="App_Code\Booking.cs" />
+    <Compile Include="App_Code\BookingDetails.cs" />
     <Content Include="App_Code\Customer.cs" />
     <Content Include="App_Code\CustomerDB.cs" />
-    <Content Include="App_Code\TravelExpertsConnectDB.cs" />
+    <Compile Include="App_Code\TravelExpertsDBConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
