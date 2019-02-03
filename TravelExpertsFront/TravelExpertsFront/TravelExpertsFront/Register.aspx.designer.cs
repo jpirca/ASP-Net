@@ -49,13 +49,13 @@ namespace TravelExpertsFront {
         protected global::System.Web.UI.WebControls.TextBox txtLastName;
         
         /// <summary>
-        /// lblprovideLastName control.
+        /// lblProvideLastName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblprovideLastName;
+        protected global::System.Web.UI.WebControls.Label lblProvideLastName;
         
         /// <summary>
         /// txtAddress control.
@@ -67,13 +67,13 @@ namespace TravelExpertsFront {
         protected global::System.Web.UI.WebControls.TextBox txtAddress;
         
         /// <summary>
-        /// lblProvidAddrss control.
+        /// lblProvideAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblProvidAddrss;
+        protected global::System.Web.UI.WebControls.Label lblProvideAddress;
         
         /// <summary>
         /// txtCity control.
@@ -229,13 +229,13 @@ namespace TravelExpertsFront {
         protected global::System.Web.UI.WebControls.TextBox txtCustPassword;
         
         /// <summary>
-        /// lblProvidCustPassword control.
+        /// lblProvideCustPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblProvidCustPassword;
+        protected global::System.Web.UI.WebControls.Label lblProvideCustPassword;
         
         /// <summary>
         /// txtConfirmPassword control.
@@ -247,22 +247,22 @@ namespace TravelExpertsFront {
         protected global::System.Web.UI.WebControls.TextBox txtConfirmPassword;
         
         /// <summary>
-        /// lblProvideCofirmpwd control.
+        /// lblProvideConfirmpwd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblProvideCofirmpwd;
+        protected global::System.Web.UI.WebControls.Label lblProvideConfirmpwd;
         
         /// <summary>
-        /// btnRegiste control.
+        /// btnRegister control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRegiste;
+        protected global::System.Web.UI.WebControls.Button btnRegister;
         
         /// <summary>
         /// btnReset control.

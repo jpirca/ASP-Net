@@ -14,6 +14,8 @@ namespace TravelExpertsFront.App_Code
             string postalcode, string country, string homephone, string businessphone, string email,
             string CustLoginName, string CustPassword, string CustConfrimPassword, int? agent = null)
         {
+            int? agentID = null;
+            
             //Initialize all member variables of Customers Class
             bool custRegistered = false;
             // SqlConnection connection = TravelExpertsConnectDB.GetConnection();
@@ -28,7 +30,7 @@ namespace TravelExpertsFront.App_Code
             custObj.CustHomePhone = homephone;
             custObj.CustBusPhone = businessphone;
             custObj.Email = email;
-            custObj.Agent = agent;
+            custObj.AgentId = agent ?? Convert.ToInt32(agent);
             custObj.CustLoginName = CustLoginName;
             custObj.CustPassword = CustPassword;
             custObj.CustConfirmPassword = CustConfrimPassword;
@@ -53,7 +55,7 @@ namespace TravelExpertsFront.App_Code
                 cmd.Parameters.AddWithValue("@hPhone", custObj.CustHomePhone);
                 cmd.Parameters.AddWithValue("@bPhone", custObj.CustBusPhone);
                 cmd.Parameters.AddWithValue("@email", custObj.Email);
-                cmd.Parameters.AddWithValue("@agentid", custObj.Agent);
+                cmd.Parameters.AddWithValue("@agentid", custObj.AgentId);
                 cmd.Parameters.AddWithValue("@loginname", custObj.CustLoginName);
                 cmd.Parameters.AddWithValue("@custpassword", custObj.CustPassword);
                 cmd.Parameters.AddWithValue("@custconfirmpassword", custObj.CustConfirmPassword);

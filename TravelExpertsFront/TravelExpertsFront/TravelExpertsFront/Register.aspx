@@ -78,46 +78,46 @@
                                 	<div class="content">
                                     	<div class="form-group">
                                         	<asp:TextBox ID="txtFirstName" runat="server" class="form-control" placeholder="First Name"></asp:TextBox>
-                                        <asp:Label ID="lblPovideFname" runat="server" CssClass="lableerror"></asp:Label>
+                                            <asp:Label ID="lblPovideFname" runat="server" CssClass="label label-danger"></asp:Label>
                                     	</div>
                                     	<div class="form-group">
                                             <asp:TextBox ID="txtLastName" runat="server" class="form-control" placeholder="Last Name"></asp:TextBox>
-                                             <asp:Label ID="lblprovideLastName" runat="server" CssClass="lableerror"></asp:Label>
+                                             <asp:Label ID="lblProvideLastName" runat="server" CssClass="label label-danger"></asp:Label>
                                     	</div>
                                     	<div class="form-group">
                                         	<asp:TextBox ID="txtAddress" runat="server" class="form-control" placeholder="Your Address"></asp:TextBox>
-                                            <asp:Label ID="lblProvidAddrss" runat="server" CssClass="lableerror"></asp:Label>
+                                            <asp:Label ID="lblProvideAddress" runat="server" CssClass="label label-danger"></asp:Label>
                                     	</div>
                                     	<div class="form-group">
                                         	<asp:TextBox ID="txtCity" runat="server" class="form-control" placeholder="Calgary"></asp:TextBox>
-                                            <asp:Label ID="lblProvideCity" runat="server" CssClass="lableerror"></asp:Label>
+                                            <asp:Label ID="lblProvideCity" runat="server" CssClass="label label-danger"></asp:Label>
                                     	</div>
                                     	<div class="form-group">
                                         	<asp:TextBox ID="txtProvince" runat="server" class="form-control" placeholder="Province, AB"></asp:TextBox>
-                                            <asp:Label ID="lblProvideProvince" runat="server" CssClass="lableerror"></asp:Label>
+                                            <asp:Label ID="lblProvideProvince" runat="server" CssClass="label label-danger"></asp:Label>
                                     	</div>
                                     	<div class="form-group">
                                         	<asp:TextBox ID="txtPostalCode" runat="server" class="form-control" placeholder="Postal Code, A1A A1A"></asp:TextBox>
-                                            <asp:Label ID="lblProvidePostalCode" runat="server" CssClass="lableerror"></asp:Label>
+                                            <asp:Label ID="lblProvidePostalCode" runat="server" CssClass="label label-danger"></asp:Label>
                                     	</div>
                                        <div class="form-group">
                                         	 <asp:TextBox ID="txtCountry" runat="server" class="form-control" placeholder="Canada"></asp:TextBox>
-                                             <asp:Label ID="lblProvideCountry" runat="server" CssClass="lableerror"></asp:Label>
+                                             <asp:Label ID="lblProvideCountry" runat="server" CssClass="label label-danger"></asp:Label>
                                     	</div>
                                     	<div class="form-group">
                                         	  <asp:TextBox ID="txtBusPhone" runat="server" class="form-control" placeholder="(587)9879999"></asp:TextBox>
-                                              <asp:Label ID="lblProvideBusPhone" runat="server" CssClass="lableerror"></asp:Label>
+                                              <asp:Label ID="lblProvideBusPhone" runat="server" CssClass="label label-danger"></asp:Label>
                                     	</div>
                                     	<div class="form-group">
                                         	<asp:TextBox ID="txtEmail" runat="server" class="form-control" placeholder="email@email.com"></asp:TextBox>
-                                             <asp:Label ID="lblProvideEmail" runat="server" CssClass="lableerror"></asp:Label>
+                                             <asp:Label ID="lblProvideEmail" runat="server" CssClass="label label-danger"></asp:Label>
                                     	</div>
                                     	<div class="form-group">
                                         	 <asp:TextBox ID="txtHomePhone" runat="server" class="form-control" placeholder="(587)9789999"></asp:TextBox>
-                                             <asp:Label ID="lblProvideHomePhone" runat="server" CssClass="lableerror"></asp:Label>
+                                             <asp:Label ID="lblProvideHomePhone" runat="server" CssClass="label label-danger"></asp:Label>
                                     	</div>
                                 	</div>
-                                    <hr />
+                                   
                             	</div>
                         	
                     	</div>
@@ -132,20 +132,22 @@
                                     	</div>
                                     	<div class="form-group">
                                         	<asp:TextBox ID="txtCustPassword" placeholder="Password" TextMode="Password" runat="server" class="form-control"></asp:TextBox>
-                                            <asp:Label ID="lblProvidCustPassword" runat="server" CssClass="lableerror"></asp:Label>
+                                            <asp:Label ID="lblProvideCustPassword" runat="server" CssClass="lableerror"></asp:Label>
                                     	</div>
                                         <div class="form-group">
                                         	<asp:TextBox ID="txtConfirmPassword" placeholder="Confirm Password" TextMode="Password" runat="server" class="form-control"></asp:TextBox>
-                                            <asp:Label ID="lblProvideCofirmpwd" runat="server" CssClass="lableerror"></asp:Label>
+                                            <asp:Label ID="lblProvideConfirmpwd" runat="server" CssClass="lableerror"></asp:Label>
                                     	</div>
                                 	</div>
-                                    <hr />
+                                   
                                 	
                             	</div>
                         	
-                    	</div>
-                        <div class=" col-md-12 footer text-center">
-                              <asp:Button ID="btnRegiste" class="btn btn-fill btn-danger btn-wd" runat="server" OnClick="btnRegister_Click" Text="Create Free Account" />
+                    	</div> 
+                       
+                        <div class=" col-md-12 footer text-center"> 
+                            <hr>
+                              <asp:Button ID="btnRegister" class="btn btn-fill btn-danger btn-wd" runat="server" OnClick="btnRegister_Click" Text="Create Free Account" />
                               <asp:Button ID="btnReset" CssClass="btn btn-fill btn-danger btn-wd" runat="server" Text="Clear Form" OnClick="btnReset_Click" />
                          </div>
 					</form>

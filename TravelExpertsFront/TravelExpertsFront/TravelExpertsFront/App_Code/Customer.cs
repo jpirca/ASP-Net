@@ -18,7 +18,7 @@ namespace TravelExpertsFront.App_Code
         public string CustHomePhone { get; set; }
         public string CustBusPhone { get; set; }
         public string Email { get; set; }
-        public int? Agent { get; set; }
+        public int? AgentId { get; set; }
         public string CustLoginName { get; set; }
         public string CustPassword { get; set; }
         public string CustConfirmPassword { get; set; }
