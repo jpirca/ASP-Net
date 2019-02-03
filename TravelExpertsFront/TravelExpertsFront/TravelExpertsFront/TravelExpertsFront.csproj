@@ -67,11 +67,62 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\css\bootstrap.min.css" />
+    <Content Include="Assets\css\demo.css" />
+    <Content Include="Assets\css\paper-dashboard.css" />
+    <Content Include="Assets\css\themify-icons.css" />
+    <Content Include="Assets\fonts\themify.svg" />
+    <Content Include="Assets\img\apple-icon.png" />
+    <Content Include="Assets\img\background.jpg" />
+    <Content Include="Assets\img\background\background-1.jpg" />
+    <Content Include="Assets\img\background\background-2.jpg" />
+    <Content Include="Assets\img\background\background-3.jpg" />
+    <Content Include="Assets\img\background\background-4.jpg" />
+    <Content Include="Assets\img\background\background-5.png" />
+    <Content Include="Assets\img\default-avatar.png" />
+    <Content Include="Assets\img\faces\face-0.jpg" />
+    <Content Include="Assets\img\faces\face-1.jpg" />
+    <Content Include="Assets\img\faces\face-2.jpg" />
+    <Content Include="Assets\img\faces\face-3.jpg" />
+    <Content Include="Assets\img\favicon.png" />
+    <Content Include="Assets\img\logo\tr-color-white.png" />
+    <Content Include="Assets\img\logo\tr-color.png" />
+    <Content Include="Assets\img\logo\tr-white.png" />
+    <Content Include="Assets\img\mask.png" />
+    <Content Include="Assets\img\new_logo.png" />
+    <Content Include="Assets\img\tables\agenda.png" />
+    <Content Include="Assets\img\tables\evernote.png" />
+    <Content Include="Assets\img\tables\stylus.jpg" />
+    <Content Include="Assets\img\tim_80x80.png" />
+    <Content Include="Assets\js\bootstrap-datetimepicker.js" />
+    <Content Include="Assets\js\bootstrap-notify.js" />
+    <Content Include="Assets\js\bootstrap-selectpicker.js" />
+    <Content Include="Assets\js\bootstrap-switch-tags.js" />
+    <Content Include="Assets\js\bootstrap-table.js" />
+    <Content Include="Assets\js\bootstrap.min.js" />
+    <Content Include="Assets\js\chartist.min.js" />
+    <Content Include="Assets\js\demo.js" />
+    <Content Include="Assets\js\es6-promise-auto.min.js" />
+    <Content Include="Assets\js\fullcalendar.min.js" />
+    <Content Include="Assets\js\jquery-3.1.1.min.js" />
+    <Content Include="Assets\js\jquery-jvectormap.js" />
+    <Content Include="Assets\js\jquery-ui.min.js" />
+    <Content Include="Assets\js\jquery.bootstrap.wizard.min.js" />
+    <Content Include="Assets\js\jquery.datatables.js" />
+    <Content Include="Assets\js\jquery.easypiechart.min.js" />
+    <Content Include="Assets\js\jquery.validate.min.js" />
+    <Content Include="Assets\js\moment.min.js" />
+    <Content Include="Assets\js\nouislider.min.js" />
+    <Content Include="Assets\js\paper-dashboard.js" />
+    <Content Include="Assets\js\perfect-scrollbar.min.js" />
+    <Content Include="Assets\js\sweetalert2.js" />
     <Content Include="bootstrap\bootstrap.min.css" />
     <Content Include="bootstrap\bootstrap.min.js" />
     <Content Include="bootstrap\jquery.js" />
     <Content Include="CustomerRegisteration.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="OrderHistory.aspx" />
+    <Content Include="Register.aspx" />
     <Content Include="RegistrationConfirmaton.aspx" />
     <Content Include="stylesheet\travelExpertsStyles.css" />
     <Content Include="Web.config" />
@@ -80,6 +131,8 @@
     <Compile Include="Agents.cs" />
     <Compile Include="AgentsDB.cs" />
     <Compile Include="App_Code\BookingDB.cs" />
+    <Content Include="App_Code\Customer.cs" />
+    <Content Include="App_Code\CustomerDB.cs" />
     <Compile Include="CustomerRegisteration.aspx.cs">
       <DependentUpon>CustomerRegisteration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -87,14 +140,26 @@
     <Compile Include="CustomerRegisteration.aspx.designer.cs">
       <DependentUpon>CustomerRegisteration.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Customers.cs" />
-    <Compile Include="CustomersDB.cs" />
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="OrderHistory.aspx.cs">
       <DependentUpon>OrderHistory.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="OrderHistory.aspx.designer.cs">
       <DependentUpon>OrderHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="RegistrationConfirmaton.aspx.cs">
       <DependentUpon>RegistrationConfirmaton.aspx</DependentUpon>
@@ -106,12 +171,73 @@
     <Compile Include="TravelExpertsConnectDB.cs" />
     <Compile Include="App_Code\Booking.cs" />
     <Compile Include="App_Code\BookingDetails.cs" />
-    <Content Include="App_Code\Customer.cs" />
-    <Content Include="App_Code\CustomerDB.cs" />
     <Compile Include="App_Code\TravelExpertsDBConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\fonts\themify.eot" />
+    <Content Include="Assets\fonts\themify.ttf" />
+    <Content Include="Assets\fonts\themify.woff" />
+    <Content Include="Assets\sass\paper-dashboard.scss" />
+    <Content Include="Assets\sass\paper\_alerts.scss" />
+    <Content Include="Assets\sass\paper\_animated-buttons.scss" />
+    <Content Include="Assets\sass\paper\_buttons.scss" />
+    <Content Include="Assets\sass\paper\_cards.scss" />
+    <Content Include="Assets\sass\paper\_carousel.scss" />
+    <Content Include="Assets\sass\paper\_chat-message.scss" />
+    <Content Include="Assets\sass\paper\_checkbox-radio.scss" />
+    <Content Include="Assets\sass\paper\_circlechart.scss" />
+    <Content Include="Assets\sass\paper\_collapse.scss" />
+    <Content Include="Assets\sass\paper\_dropdown.scss" />
+    <Content Include="Assets\sass\paper\_footers.scss" />
+    <Content Include="Assets\sass\paper\_forms.scss" />
+    <Content Include="Assets\sass\paper\_inputs.scss" />
+    <Content Include="Assets\sass\paper\_labels.scss" />
+    <Content Include="Assets\sass\paper\_media.scss" />
+    <Content Include="Assets\sass\paper\_misc.scss" />
+    <Content Include="Assets\sass\paper\_mixins.scss" />
+    <Content Include="Assets\sass\paper\_modal.scss" />
+    <Content Include="Assets\sass\paper\_navbars.scss" />
+    <Content Include="Assets\sass\paper\_pages.scss" />
+    <Content Include="Assets\sass\paper\_progress-bars.scss" />
+    <Content Include="Assets\sass\paper\_responsive.scss" />
+    <Content Include="Assets\sass\paper\_sidebar-and-main-panel.scss" />
+    <Content Include="Assets\sass\paper\_sliders.scss" />
+    <Content Include="Assets\sass\paper\_social.scss" />
+    <Content Include="Assets\sass\paper\_switch.scss" />
+    <Content Include="Assets\sass\paper\_tables.scss" />
+    <Content Include="Assets\sass\paper\_tabs-navs-pagination.scss" />
+    <Content Include="Assets\sass\paper\_tags.scss" />
+    <Content Include="Assets\sass\paper\_timeline.scss" />
+    <Content Include="Assets\sass\paper\_tooltips-and-popovers.scss" />
+    <Content Include="Assets\sass\paper\_typography.scss" />
+    <Content Include="Assets\sass\paper\_variables.scss" />
+    <Content Include="Assets\sass\paper\mixins\_alerts.scss" />
+    <Content Include="Assets\sass\paper\mixins\_buttons.scss" />
+    <Content Include="Assets\sass\paper\mixins\_cards.scss" />
+    <Content Include="Assets\sass\paper\mixins\_chartist.scss" />
+    <Content Include="Assets\sass\paper\mixins\_icons.scss" />
+    <Content Include="Assets\sass\paper\mixins\_inputs.scss" />
+    <Content Include="Assets\sass\paper\mixins\_labels.scss" />
+    <Content Include="Assets\sass\paper\mixins\_navbars.scss" />
+    <Content Include="Assets\sass\paper\mixins\_sidebar.scss" />
+    <Content Include="Assets\sass\paper\mixins\_social.scss" />
+    <Content Include="Assets\sass\paper\mixins\_table-row.scss" />
+    <Content Include="Assets\sass\paper\mixins\_tabs.scss" />
+    <Content Include="Assets\sass\paper\mixins\_tags.scss" />
+    <Content Include="Assets\sass\paper\mixins\_transparency.scss" />
+    <Content Include="Assets\sass\paper\mixins\_vendor-prefixes.scss" />
+    <Content Include="Assets\sass\paper\plugins\_animate.scss" />
+    <Content Include="Assets\sass\paper\plugins\_bootstrap-select.scss" />
+    <Content Include="Assets\sass\paper\plugins\_bootstrap-table.scss" />
+    <Content Include="Assets\sass\paper\plugins\_chartist.scss" />
+    <Content Include="Assets\sass\paper\plugins\_datatables.net.scss" />
+    <Content Include="Assets\sass\paper\plugins\_datetime-picker.scss" />
+    <Content Include="Assets\sass\paper\plugins\_fullcalendar.scss" />
+    <Content Include="Assets\sass\paper\plugins\_jquery.jvectormap.scss" />
+    <Content Include="Assets\sass\paper\plugins\_nouislider.scss" />
+    <Content Include="Assets\sass\paper\plugins\_perfect-scrollbar.scss" />
+    <Content Include="Assets\sass\paper\plugins\_sweetalert2.scss" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -122,6 +248,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Assets\img\flags\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

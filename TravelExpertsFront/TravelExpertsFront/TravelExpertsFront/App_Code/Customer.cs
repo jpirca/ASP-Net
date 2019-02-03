@@ -7,7 +7,7 @@ namespace TravelExpertsFront.App_Code
 {
     public class Customer
     {
-        public Customer() { }
+        //Define member variable properties
         public string CustFirstName { get; set; }
         public string CustLastName { get; set; }
         public string CustAddress { get; set; }
@@ -15,8 +15,14 @@ namespace TravelExpertsFront.App_Code
         public string CustProv { get; set; }
         public string CustPostal { get; set; }
         public string CustCountry { get; set; }
-        public string CustHomePhoe { get; set; }
+        public string CustHomePhone { get; set; }
         public string CustBusPhone { get; set; }
         public string Email { get; set; }
+        public int? Agent { get; set; }
+        public string CustLoginName { get; set; }
+        public string CustPassword { get; set; }
+        public string CustConfirmPassword { get; set; }
+        //Define constructor
+        public Customer() { }
     }
 }

@@ -6,55 +6,117 @@ using System.Web;
 
 namespace TravelExpertsFront.App_Code
 {
-    public static class CustomerDB
+    public class CustomerDB
     {
-        public static bool RegisterCustomer()
+        /*Function gets data from customerRegistration form, and submit into data base,
+         returns true if submission is successful otherwise will return false*/
+        public bool RegisterCustomer(string fName, string lName, string address, string city, string province,
+            string postalcode, string country, string homephone, string businessphone, string email,
+            string CustLoginName, string CustPassword, string CustConfrimPassword, int? agent = null)
         {
-            bool custRisgered = false;
-            SqlConnection connection = TravelExpertsDBConnection.GetConnection();
+            //Initialize all member variables of Customers Class
+            bool custRegistered = false;
+            // SqlConnection connection = TravelExpertsConnectDB.GetConnection();
             Customer custObj = new Customer();
-            custObj.CustFirstName = "Muhammad";
-            custObj.CustLastName = "Islam";
-            custObj.CustAddress = "7 Tralake Gardens NE";
-            custObj.CustCity = "Calgary";
-            custObj.CustProv = "AB";
-            custObj.CustPostal = "T3j0A9";
-            custObj.CustCountry = "Canada";
-            custObj.CustHomePhoe = "4039713419";
-            custObj.CustBusPhone = "";
-            custObj.Email = "islammtci@yahoo.com";
-
+            custObj.CustFirstName = fName;
+            custObj.CustLastName = lName;
+            custObj.CustAddress = address;
+            custObj.CustCity = city;
+            custObj.CustProv = province;
+            custObj.CustPostal = postalcode;
+            custObj.CustCountry = country;
+            custObj.CustHomePhone = homephone;
+            custObj.CustBusPhone = businessphone;
+            custObj.Email = email;
+            custObj.Agent = agent;
+            custObj.CustLoginName = CustLoginName;
+            custObj.CustPassword = CustPassword;
+            custObj.CustConfirmPassword = CustConfrimPassword;
+            //Define the Insert query
             string query = "insert into Customers(CustFirstName,CustLastName,CustAddress,CustCity,CustProv" +
-                ",CustPostal,CustCountry,CustHomePhone,CustBusPhone,CustEmail) values(@fName,@lName,@address" +
-                ",@city,@prov,@postal,@country,@hPhone,@bPhone,@email)";
-            SqlCommand cmd = new SqlCommand(query, connection);
-            cmd.Parameters.AddWithValue("@fName", custObj.CustFirstName);
-            cmd.Parameters.AddWithValue("@lName", custObj.CustLastName);
-            cmd.Parameters.AddWithValue("@address", custObj.CustAddress);
-            cmd.Parameters.AddWithValue("@city", custObj.CustCity);
-            cmd.Parameters.AddWithValue("@prov", custObj.CustProv);
-            cmd.Parameters.AddWithValue("@postal", custObj.CustPostal);
-            cmd.Parameters.AddWithValue("@country", custObj.CustCountry);
-            cmd.Parameters.AddWithValue("@hPhone", custObj.CustHomePhoe);
-            cmd.Parameters.AddWithValue("@bPhone", custObj.CustBusPhone);
-            cmd.Parameters.AddWithValue("@email", custObj.Email);
-            //  try
-            // {
-            connection.Open();
-            cmd.ExecuteNonQuery();
-            custRisgered = true;
-            // }
-            // catch (SqlException e)
-            // {
+                ",CustPostal,CustCountry,CustHomePhone,CustBusPhone,CustEmail,AgentId,CustLoginName" +
+                ",CustPassword,CustConfirmPassword) values(@fName,@lName,@address" +
+                ",@city,@prov,@postal,@country,@hPhone,@bPhone,@email,@agentid,@loginname" +
+                ",@custpassword,@custconfirmpassword)";
+            //Define the parameters
+            using (SqlConnection connection = new SqlConnection(TravelExpertsConnectDB.GetConnectionString()))
+            {
+                SqlCommand cmd = new SqlCommand(query, connection);
 
+                cmd.Parameters.AddWithValue("@fName", custObj.CustFirstName);
+                cmd.Parameters.AddWithValue("@lName", custObj.CustLastName);
+                cmd.Parameters.AddWithValue("@address", custObj.CustAddress);
+                cmd.Parameters.AddWithValue("@city", custObj.CustCity);
+                cmd.Parameters.AddWithValue("@prov", custObj.CustProv);
+                cmd.Parameters.AddWithValue("@postal", custObj.CustPostal);
+                cmd.Parameters.AddWithValue("@country", custObj.CustCountry);
+                cmd.Parameters.AddWithValue("@hPhone", custObj.CustHomePhone);
+                cmd.Parameters.AddWithValue("@bPhone", custObj.CustBusPhone);
+                cmd.Parameters.AddWithValue("@email", custObj.Email);
+                cmd.Parameters.AddWithValue("@agentid", custObj.Agent);
+                cmd.Parameters.AddWithValue("@loginname", custObj.CustLoginName);
+                cmd.Parameters.AddWithValue("@custpassword", custObj.CustPassword);
+                cmd.Parameters.AddWithValue("@custconfirmpassword", custObj.CustConfirmPassword);
 
-            // }
-            // finally
-            // {
-            connection.Close();
+                try
+                {
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+                    custRegistered = true;
+                }
+                catch (SqlException e)
+                {
+                    throw e;
 
-            // }
-            return custRisgered;
+                }
+                //finally
+                //{
+                //    connection.Close();
+
+                //}
+            }
+            return custRegistered;
+        }
+        public bool isValidUserName(string name)
+        {
+            int count = 0;
+            bool isValidUser = false;
+            string Name;
+            // define connection
+            // SqlConnection connection = TravelExpertsConnectDB.GetConnection();
+            using (SqlConnection connection = new SqlConnection(TravelExpertsConnectDB.GetConnectionString()))
+            {
+                // define the select query command
+                string selectQuery = "select CustLoginName from customers where CustLoginName=@loginname";
+                SqlCommand selectCommand = new SqlCommand(selectQuery, connection);
+                selectCommand.Parameters.AddWithValue("@loginname", name);
+                try
+                {
+                    // open the connection
+                    connection.Open();
+
+                    // execute the query
+                    SqlDataReader reader = selectCommand.ExecuteReader(); // can be multiple records
+
+                    // process the results
+                    while (reader.Read()) // while there are customers
+                    {
+
+                        Name = reader["CustLoginName"].ToString();
+                        count++;
+                    }
+                    if (count > 0)
+                    {
+                        isValidUser = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw ex; // let the form handle it
+                }
+
+            }
+            return isValidUser;
         }
     }
 }
