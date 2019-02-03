@@ -21,7 +21,6 @@ namespace TravelExpertsFront.App_Code
         public int? AgentId { get; set; }
         public string CustLoginName { get; set; }
         public string CustPassword { get; set; }
-        public string CustConfirmPassword { get; set; }
         //Define constructor
         public Customer() { }
     }

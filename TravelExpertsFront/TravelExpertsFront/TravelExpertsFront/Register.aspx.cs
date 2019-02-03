@@ -25,7 +25,7 @@ namespace TravelExpertsFront
         protected void btnRegister_Click(object sender, EventArgs e)
         {
 
-            if (ValidateForm()) {
+            if (ValidateForm()) { 
 
 
                 string firstName = txtFirstName.Text;
@@ -42,8 +42,7 @@ namespace TravelExpertsFront
                 string custPassword = txtConfirmPassword.Text;
                 string custConfirmPaswword = txtConfirmPassword.Text;
                 if (regObj.RegisterCustomer(firstName, lastName, custAddress, custCity, custProvice, custPostalcode,
-                    custCountry, custHomePhone, custBusinessPhone, custEmail,
-                    custLoginName, custPassword, custConfirmPaswword))
+                    custCountry, custHomePhone, custBusinessPhone, custEmail, custLoginName, custPassword))
                 {
 
                     Response.Redirect("RegistrationConfirmaton.aspx");
@@ -58,7 +57,7 @@ namespace TravelExpertsFront
             if (txtFirstName.Text == "")
             {
                 lblPovideFname.Text = "Please Provide Your First Name";
-                Validate = false;
+                return false;
             }
             else{
                 lblPovideFname.Text = "";
@@ -68,7 +67,7 @@ namespace TravelExpertsFront
             if (txtLastName.Text == "")
             {
                 lblProvideLastName.Text = "Please Provide Your Last Name";
-                Validate = false;
+                return false;
             }
             else {
                 lblProvideLastName.Text = "";
@@ -78,7 +77,7 @@ namespace TravelExpertsFront
             if (txtAddress.Text == "")
             {
                 lblProvideAddress.Text = "Please Provide Your Address";
-                Validate = false;
+                return false;
             } else {
                 lblProvideAddress.Text = "";
                 Validate = true;
@@ -88,7 +87,7 @@ namespace TravelExpertsFront
             if (txtCity.Text == "")
             {
                 lblProvideCity.Text = "Please Provide Your City";
-                Validate = false;
+                return false;
             }
             else {
                 lblProvideCity.Text = "";
@@ -98,7 +97,7 @@ namespace TravelExpertsFront
             if (txtProvince.Text == "" || txtProvince.Text.Length > 2)
             {
                 lblProvideProvince.Text = "Please Provide Your Province";
-                Validate = false;
+                return false;
             }
             else {
                 lblProvideProvince.Text = "";
@@ -108,7 +107,7 @@ namespace TravelExpertsFront
             if (txtPostalCode.Text == "" || !IsPostalCode(Convert.ToString(txtPostalCode.Text)))
             {
                 lblProvidePostalCode.Text = "Postal Code is Empty Or Invalid";
-                Validate = false;
+                return false;
             }
             else {
                 lblProvidePostalCode.Text = "";
@@ -118,7 +117,7 @@ namespace TravelExpertsFront
             if (txtCountry.Text == "")
             {
                 lblProvideCountry.Text = "Please Provide YourCountry";
-                Validate = false;
+                return false;
             }
             else {
                 lblProvideCountry.Text = "";
@@ -128,7 +127,7 @@ namespace TravelExpertsFront
             if (!IsValidPhone(txtHomePhone.Text))
             {
                 lblProvideHomePhone.Text = "Provide Your Phone Number Within 10 digits";
-                Validate = false;
+                return false;
             }
             else {
                 lblProvideHomePhone.Text = "";
@@ -138,7 +137,7 @@ namespace TravelExpertsFront
             if (!(txtBusPhone.Text == "") && !IsValidPhone(txtBusPhone.Text))
             {
                 lblProvideBusPhone.Text = "Provide Your Business Number Within 10 digits";
-                Validate = false;
+                return false;
             }
             else {
                 lblProvideBusPhone.Text = "";
@@ -148,7 +147,7 @@ namespace TravelExpertsFront
             if (txtEmail.Text == "" || !isValidEmail(txtEmail.Text))
             {
                 lblProvideEmail.Text = "Make Sure Your Is In The Correct Format";
-                Validate = false;
+                return false;
             }
             else {
 
@@ -162,23 +161,23 @@ namespace TravelExpertsFront
                 if (txtLoginName.Text == "")
                 {
                     lblProvideLoginName.Text = "Please provide a Username";
-                    Validate = false;
+                    return false;
                 }
                 else
                 {
                     lblProvideLoginName.Text = "Your Username already exists, Please choose another Name";
-                    Validate = false;
+                    return false;
                 }
 
             }else{
-                txtLoginName.Text = "";
+                lblProvideLoginName.Text = "";
                 Validate = true;
             }
 
             if (txtCustPassword.Text == "")
             {
                 lblProvideCustPassword.Text = "Please provide Password";
-                Validate = false;
+                return false;
             } else {
                 lblProvideCustPassword.Text = "";
                 Validate = true;
@@ -186,7 +185,7 @@ namespace TravelExpertsFront
 
             if (txtConfirmPassword.Text == "") {
                 lblProvideConfirmpwd.Text = "Please Provide Confirm Password";
-                Validate = false;
+                return false;
             }
             else
             {
@@ -197,7 +196,7 @@ namespace TravelExpertsFront
             if ((txtCustPassword.Text.Length > 0 && txtConfirmPassword.Text.Length > 0) && (txtCustPassword.Text != txtConfirmPassword.Text))
             {
                 lblProvideConfirmpwd.Text = "Your Passwords don't match, Try entering them again :)";
-                Validate = false;
+                return false;
             }
             else {
                 Validate = true;
@@ -263,7 +262,7 @@ namespace TravelExpertsFront
                         {
                             // myspan.InnerHtml = ((TextBox)c2).Text;
                             ((TextBox)c2).Text = "";  //or  ((TextBox)c2).Text.Length = 0;
-                            Response.Redirect("~/CustomerRegisteration.aspx");
+                            Response.Redirect("~/Register.aspx");
                         }
                     }
                 }

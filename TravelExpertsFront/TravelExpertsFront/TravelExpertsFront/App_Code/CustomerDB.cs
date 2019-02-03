@@ -12,9 +12,9 @@ namespace TravelExpertsFront.App_Code
          returns true if submission is successful otherwise will return false*/
         public bool RegisterCustomer(string fName, string lName, string address, string city, string province,
             string postalcode, string country, string homephone, string businessphone, string email,
-            string CustLoginName, string CustPassword, string CustConfrimPassword, int? agent = null)
+            string CustLoginName, string CustPassword, int? agent = null)
         {
-            int? agentID = null;
+            
             
             //Initialize all member variables of Customers Class
             bool custRegistered = false;
@@ -30,21 +30,22 @@ namespace TravelExpertsFront.App_Code
             custObj.CustHomePhone = homephone;
             custObj.CustBusPhone = businessphone;
             custObj.Email = email;
-            custObj.AgentId = agent ?? Convert.ToInt32(agent);
             custObj.CustLoginName = CustLoginName;
             custObj.CustPassword = CustPassword;
-            custObj.CustConfirmPassword = CustConfrimPassword;
+
             //Define the Insert query
             string query = "insert into Customers(CustFirstName,CustLastName,CustAddress,CustCity,CustProv" +
                 ",CustPostal,CustCountry,CustHomePhone,CustBusPhone,CustEmail,AgentId,CustLoginName" +
-                ",CustPassword,CustConfirmPassword) values(@fName,@lName,@address" +
+                ",CustPassword) values(@fName,@lName,@address" +
                 ",@city,@prov,@postal,@country,@hPhone,@bPhone,@email,@agentid,@loginname" +
-                ",@custpassword,@custconfirmpassword)";
+                ",@custpassword)";
+
+           
             //Define the parameters
             using (SqlConnection connection = new SqlConnection(TravelExpertsConnectDB.GetConnectionString()))
             {
                 SqlCommand cmd = new SqlCommand(query, connection);
-
+               
                 cmd.Parameters.AddWithValue("@fName", custObj.CustFirstName);
                 cmd.Parameters.AddWithValue("@lName", custObj.CustLastName);
                 cmd.Parameters.AddWithValue("@address", custObj.CustAddress);
@@ -55,14 +56,15 @@ namespace TravelExpertsFront.App_Code
                 cmd.Parameters.AddWithValue("@hPhone", custObj.CustHomePhone);
                 cmd.Parameters.AddWithValue("@bPhone", custObj.CustBusPhone);
                 cmd.Parameters.AddWithValue("@email", custObj.Email);
-                cmd.Parameters.AddWithValue("@agentid", custObj.AgentId);
+                cmd.Parameters.AddWithValue("@agentid", agent == null ? (object)DBNull.Value : Convert.ToInt32(agent));
                 cmd.Parameters.AddWithValue("@loginname", custObj.CustLoginName);
                 cmd.Parameters.AddWithValue("@custpassword", custObj.CustPassword);
-                cmd.Parameters.AddWithValue("@custconfirmpassword", custObj.CustConfirmPassword);
+                
 
                 try
                 {
                     connection.Open();
+                    Console.WriteLine(custObj.CustLoginName.ToString());
                     cmd.ExecuteNonQuery();
                     custRegistered = true;
                 }

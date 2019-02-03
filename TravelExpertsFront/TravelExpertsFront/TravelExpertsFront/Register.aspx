@@ -128,15 +128,15 @@
                                     	
                                     	<div class="form-group">
                                         	<asp:TextBox ID="txtLoginName" runat="server" class="form-control" placeholder="Username"></asp:TextBox>
-                                            <asp:Label ID="lblProvideLoginName" runat="server" CssClass="lableerror"></asp:Label>
+                                            <asp:Label ID="lblProvideLoginName" runat="server" CssClass="label label-danger"></asp:Label>
                                     	</div>
                                     	<div class="form-group">
                                         	<asp:TextBox ID="txtCustPassword" placeholder="Password" TextMode="Password" runat="server" class="form-control"></asp:TextBox>
-                                            <asp:Label ID="lblProvideCustPassword" runat="server" CssClass="lableerror"></asp:Label>
+                                            <asp:Label ID="lblProvideCustPassword" runat="server" CssClass="label label-danger"></asp:Label>
                                     	</div>
                                         <div class="form-group">
                                         	<asp:TextBox ID="txtConfirmPassword" placeholder="Confirm Password" TextMode="Password" runat="server" class="form-control"></asp:TextBox>
-                                            <asp:Label ID="lblProvideConfirmpwd" runat="server" CssClass="lableerror"></asp:Label>
+                                            <asp:Label ID="lblProvideConfirmpwd" runat="server" CssClass="label label-danger"></asp:Label>
                                     	</div>
                                 	</div>
                                    
