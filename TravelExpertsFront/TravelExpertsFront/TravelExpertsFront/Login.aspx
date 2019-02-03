@@ -67,7 +67,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4 col-sm-6 col-md-offset-4 col-sm-offset-3">
-                               <form id="form2" runat="server">
+                               <form id="form1" runat="server">
                                 <div class="card" data-background="color" data-color="blue">
                                     <div class="card-header">
                                         <h3 class="card-title">Login</h3>

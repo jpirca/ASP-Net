@@ -131,8 +131,8 @@
     <Compile Include="Agents.cs" />
     <Compile Include="AgentsDB.cs" />
     <Compile Include="App_Code\BookingDB.cs" />
-    <Content Include="App_Code\Customer.cs" />
-    <Content Include="App_Code\CustomerDB.cs" />
+    <Compile Include="App_Code\Customer.cs" />
+    <Compile Include="App_Code\CustomerDB.cs" />
     <Compile Include="CustomerRegisteration.aspx.cs">
       <DependentUpon>CustomerRegisteration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
