@@ -62,17 +62,19 @@ namespace TravelExpertsFront.App_Code
                             bookingDetail.Destination = Convert.ToString(reader["Destination"]);
                             bookingDetail.BasePrice = Convert.ToDecimal(reader["BasePrice"]);
                             bookingDetail.AgencyCommission = Convert.ToDecimal(reader["AgencyCommission"]);
-                            bookingDetail.RegionId = Convert.ToString(reader["RegionId"]);
+                            //bookingDetail.RegionId = Convert.ToString(reader["RegionId"]);
                             bookingDetail.RegionName = Convert.ToString(reader["RegionName"]);
-                            bookingDetail.ClassId = Convert.ToString(reader["ClassId"]);
+                            //bookingDetail.ClassId = Convert.ToString(reader["ClassId"]);
                             bookingDetail.ClassName = Convert.ToString(reader["ClassName"]);
-                            bookingDetail.FeeId = Convert.ToString(reader["FeeId"]);
+                            //bookingDetail.FeeId = Convert.ToString(reader["FeeId"]);
                             bookingDetail.FeeName = Convert.ToString(reader["FeeName"]);
-                            bookingDetail.ProductSupplierId = Convert.ToInt32(reader["ProductSupplierId"]);
+                            //bookingDetail.ProductSupplierId = Convert.ToInt32(reader["ProductSupplierId"]);
                             bookingDetail.ProdName = Convert.ToString(reader["ProdName"]);
                             bookingDetail.SupName = Convert.ToString(reader["SupName"]);
 
                             booking.BookingDetails.Add(bookingDetail);
+                            booking.TotalCost += bookingDetail.BasePrice + bookingDetail.AgencyCommission;
+                            booking.Destination = bookingDetail.Destination;
                             bookingList.Add(booking);
                             preBooking = booking;
 
