@@ -1,0 +1,47 @@
+﻿.grow {
+    padding: 5px 5px 5px 5px;
+    border-radius: 10px;
+    height: 218px;
+    width: 45%;
+    margin: 5px 1% 5px 1%;
+    float: left;
+    position: relative;
+    transition: height 0.8s;
+    -webkit-transition: height 0.5s;
+    text-align: center;
+    overflow: hidden;
+}
+
+    .grow:hover {
+        height: 500px;
+        width: 500px;
+        z-index:999;
+    }
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+    .grow:hover {
+        height: 522px;
+        width: 390px;
+        z-index: 999;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+    .grow:hover {
+        height: 600px;
+        width: 600px;
+        z-index: 999;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    .grow:hover {
+        height: 500px;
+        width: 680px;
+        z-index: 999;
+    }
+}
+
