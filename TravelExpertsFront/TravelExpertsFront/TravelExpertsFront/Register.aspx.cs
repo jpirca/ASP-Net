@@ -134,22 +134,24 @@ namespace TravelExpertsFront
                 Validate = true;
             }
 
-            if (!(txtBusPhone.Text == "") && !IsValidPhone(txtBusPhone.Text))
+            if ( txtBusPhone.Text.Length > 0 && !IsValidPhone(txtBusPhone.Text))
             {
                 lblProvideBusPhone.Text = "Provide Your Business Number Within 10 digits";
                 return false;
             }
-            else {
+            else
+            {
                 lblProvideBusPhone.Text = "";
                 Validate = true;
             }
 
-            if (txtEmail.Text == "" || !isValidEmail(txtEmail.Text))
+            if (txtEmail.Text.Length > 0 && !isValidEmail(txtEmail.Text))
             {
-                lblProvideEmail.Text = "Make Sure Your Is In The Correct Format";
+                lblProvideEmail.Text = "Make Sure Your Email Is In The Correct Format";
                 return false;
             }
-            else {
+            else
+            {
 
                 lblProvideEmail.Text = "";
                 Validate = true;
@@ -262,7 +264,7 @@ namespace TravelExpertsFront
                         {
                             // myspan.InnerHtml = ((TextBox)c2).Text;
                             ((TextBox)c2).Text = "";  //or  ((TextBox)c2).Text.Length = 0;
-                            Response.Redirect("~/Register.aspx");
+                           // Response.Redirect("~/Register.aspx");
                         }
                     }
                 }

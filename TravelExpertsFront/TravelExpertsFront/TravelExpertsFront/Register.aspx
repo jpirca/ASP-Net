@@ -105,7 +105,7 @@
                                              <asp:Label ID="lblProvideCountry" runat="server" CssClass="label label-danger"></asp:Label>
                                     	</div>
                                     	<div class="form-group">
-                                        	  <asp:TextBox ID="txtBusPhone" runat="server" class="form-control" placeholder="(587)9879999"></asp:TextBox>
+                                        	  <asp:TextBox ID="txtBusPhone" runat="server" class="form-control" placeholder="Business Phone (optional)"></asp:TextBox>
                                               <asp:Label ID="lblProvideBusPhone" runat="server" CssClass="label label-danger"></asp:Label>
                                     	</div>
                                     	<div class="form-group">
