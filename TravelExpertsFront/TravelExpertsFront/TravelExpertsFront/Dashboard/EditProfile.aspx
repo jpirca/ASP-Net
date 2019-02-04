@@ -1,4 +1,4 @@
-﻿<%@ Page  Title ="Order History" Language="C#" AutoEventWireup="true" CodeBehind="OrderHistory.aspx.cs" Inherits="TravelExpertsFront.Dashboard.editProfile" MasterPageFile ="Dashoboard.Master"%>
+﻿<%@ Page  Title ="Edit Profile" Language="C#" AutoEventWireup="true" CodeBehind="EditProfile.aspx.cs" Inherits="TravelExpertsFront.Dashboard.editProfile" MasterPageFile ="Dashoboard.Master"%>
  <asp:Content ID="contenthead" ContentPlaceHolderID="head" runat="server"></asp:Content>
      <asp:Content ID="ContentPlaceHolder1" ContentPlaceHolderID="mainContent" runat="server">
 <%--Customer Registration Form
