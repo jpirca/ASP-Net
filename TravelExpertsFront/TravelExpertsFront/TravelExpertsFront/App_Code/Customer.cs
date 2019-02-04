@@ -8,6 +8,7 @@ namespace TravelExpertsFront.App_Code
     public class Customer
     {
         //Define member variable properties
+        public int CustomerID { get; set; }
         public string CustFirstName { get; set; }
         public string CustLastName { get; set; }
         public string CustAddress { get; set; }

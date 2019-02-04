@@ -73,9 +73,10 @@
                                         <h3 class="card-title">Login</h3>
                                     </div>
                                     <div class="card-content">
+                                        <asp:Label ID="lblErrorMessage" runat="server" CssClass ="label label-danger"></asp:Label>
                                         <div class="form-group">
-                                            <label>Email address</label>
-                                             <asp:TextBox ID="txtUsername" cssClass="form-control input-no-border" runat="server" type="email" placeholder="Enter email"></asp:TextBox>
+                                            <label>Username</label>
+                                             <asp:TextBox ID="txtUsername" cssClass="form-control input-no-border" runat="server" placeholder="Enter email"></asp:TextBox>
                                         </div>
                                         <div class="form-group">
                                             <label>Password</label>
