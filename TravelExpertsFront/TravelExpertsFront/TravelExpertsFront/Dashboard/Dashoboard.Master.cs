@@ -10,13 +10,15 @@ namespace TravelExpertsFront.Dashboard
 {
     public partial class Dashoboard : System.Web.UI.MasterPage
     {
-        Customer custObj = new Customer();
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["loggedin"] != null)
             {
+                Customer custObj = new Customer();
                 CustomerDB customerDB = new CustomerDB();
                 custObj.CustomerID = Convert.ToInt32(Session["CustID"]);
+               
                 customerDB.getallCustomerInfoById(custObj);
                 lblCustomerName.Text = custObj.CustFirstName + " " + custObj.CustLastName;
             }

@@ -8,6 +8,19 @@ namespace TravelExpertsFront.App_Code
 {
     public class CustomerDB
     {
+        public string firstName { get; set; }
+        public string lastName { get; set; }
+        public string Address { get; set; }
+        public string City { get; set; }
+        public string Prov { get; set; }
+        public string Postal { get; set; }
+        public string Country { get; set; }
+        public string homePhoe { get; set; }
+        public string busPhone { get; set; }
+        public string Email { get; set; }
+        // public int Agent { get; set; }
+        //  public string CustLoginName { get; set; }
+        public string Password { get; set; }
         /*Function gets data from customerRegistration form, and submit into data base,
          returns true if submission is successful otherwise will return false*/
         public bool RegisterCustomer(string fName, string lName, string address, string city, string province,
@@ -337,5 +350,100 @@ namespace TravelExpertsFront.App_Code
             }
         }
 
+        public bool UpdateUserProfile(string ProfName, string ProflName, string Profaddress, string Profcity, string Profprovince,
+            string Profpostalcode, string Profcountry, string Profhomephone, string Profbusinessphone,
+            string Profemail, int CustId,string ProfCustPassword)
+        {
+            bool custUpadated = false;
+            firstName = ProfName;
+            lastName = ProflName;
+            Address = Profaddress;
+            City = Profcity;
+            Prov = Profprovince;
+            Postal = Profpostalcode;
+            Country = Profcountry;
+            homePhoe = Profhomephone;
+            busPhone = Profbusinessphone;
+            Email = Profemail;
+            Password = ProfCustPassword;
+            string query;
+            SqlCommand cmd;
+
+            //Define the parameters
+            using (SqlConnection connection = new SqlConnection(TravelExpertsConnectDB.GetConnectionString()))
+            {
+                if (Password.Length>0)
+                {
+                   
+                    query = "update Customers set CustFirstName=@profName , CustLastName=@proflname ," +
+                 " CustAddress=@profaddress , CustCity=@profcity , CustProv=@profprovince , CustPostal=@profpostal , " +
+                 " CustCountry=@profcountry , CustHomePhone=@profhomephone , CustBusPhone=@profbusinphone , " +
+                 " CustEmail=@profemail, CustPassword=@profpassword where CustomerId=@profid";
+                    cmd = new SqlCommand(query, connection);
+
+                    cmd.Parameters.AddWithValue("@profName", firstName);
+                    cmd.Parameters.AddWithValue("@proflname", lastName);
+                    cmd.Parameters.AddWithValue("@profaddress", Address);
+                    cmd.Parameters.AddWithValue("@profcity", City);
+                    cmd.Parameters.AddWithValue("@profprovince", Prov);
+                    cmd.Parameters.AddWithValue("@profpostal", Postal);
+                    cmd.Parameters.AddWithValue("@profcountry", Country);
+                    cmd.Parameters.AddWithValue("@profhomephone", homePhoe);
+                    cmd.Parameters.AddWithValue("@profbusinphone", busPhone);
+                    cmd.Parameters.AddWithValue("@profemail", Email);
+                    // cmd.Parameters.AddWithValue("@profpassword",Password);
+                    cmd.Parameters.AddWithValue("@profid", CustId);
+                    cmd.Parameters.AddWithValue("@profpassword", Password.Trim());
+                }
+                else
+                {
+                    query = "update Customers set CustFirstName=@profName , CustLastName=@proflname ," +
+                   " CustAddress=@profaddress , CustCity=@profcity , CustProv=@profprovince , CustPostal=@profpostal , " +
+                   " CustCountry=@profcountry , CustHomePhone=@profhomephone , CustBusPhone=@profbusinphone , " +
+                   " CustEmail=@profemail where CustomerId=@profid";
+                    cmd = new SqlCommand(query, connection);
+
+                    cmd.Parameters.AddWithValue("@profName", firstName);
+                    cmd.Parameters.AddWithValue("@proflname", lastName);
+                    cmd.Parameters.AddWithValue("@profaddress", Address);
+                    cmd.Parameters.AddWithValue("@profcity", City);
+                    cmd.Parameters.AddWithValue("@profprovince", Prov);
+                    cmd.Parameters.AddWithValue("@profpostal", Postal);
+                    cmd.Parameters.AddWithValue("@profcountry", Country);
+                    cmd.Parameters.AddWithValue("@profhomephone", homePhoe);
+                    cmd.Parameters.AddWithValue("@profbusinphone", busPhone);
+                    cmd.Parameters.AddWithValue("@profemail", Email);
+                    // cmd.Parameters.AddWithValue("@profpassword",Password);
+                    cmd.Parameters.AddWithValue("@profid", CustId);
+
+                }
+
+
+
+                try
+                {
+                    connection.Open();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        custUpadated = true;
+                    }
+
+                }
+                catch (SqlException e)
+                {
+                    throw e;
+
+                }
+                //finally
+                //{
+                //    connection.Close();
+
+                //}
+            }
+
+            return custUpadated;
+        }
+     
     }
 }
