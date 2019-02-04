@@ -70,6 +70,7 @@
     <Content Include="Assets\css\bootstrap.min.css" />
     <Content Include="Assets\css\demo.css" />
     <Content Include="Assets\css\paper-dashboard.css" />
+    <Content Include="Assets\css\styles.css" />
     <Content Include="Assets\css\themify-icons.css" />
     <Content Include="Assets\fonts\themify.svg" />
     <Content Include="Assets\img\apple-icon.png" />
@@ -120,6 +121,10 @@
     <Content Include="bootstrap\bootstrap.min.js" />
     <Content Include="bootstrap\jquery.js" />
     <Content Include="CustomerRegisteration.aspx" />
+    <Content Include="Dashboard\EditProfile.aspx" />
+    <Content Include="Dashboard\index.aspx" />
+    <Content Include="Dashboard\logout.aspx" />
+    <Content Include="Dashboard\OrderHistory.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="OrderHistory.aspx" />
     <Content Include="Register.aspx" />
@@ -128,8 +133,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Agents.cs" />
-    <Compile Include="AgentsDB.cs" />
+    <Compile Include="App_Code\Agents.cs" />
+    <Compile Include="App_Code\AgentsDB.cs" />
     <Compile Include="App_Code\BookingDB.cs" />
     <Compile Include="App_Code\Customer.cs" />
     <Compile Include="App_Code\CustomerDB.cs" />
@@ -139,6 +144,41 @@
     </Compile>
     <Compile Include="CustomerRegisteration.aspx.designer.cs">
       <DependentUpon>CustomerRegisteration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Dashoboard.Master.cs">
+      <DependentUpon>Dashoboard.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Dashoboard.Master.designer.cs">
+      <DependentUpon>Dashoboard.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\EditProfile.aspx.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\EditProfile.aspx.designer.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\OrderHistory.aspx.cs">
+      <DependentUpon>OrderHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\OrderHistory.aspx.designer.cs">
+      <DependentUpon>OrderHistory.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -238,6 +278,7 @@
     <Content Include="Assets\sass\paper\plugins\_nouislider.scss" />
     <Content Include="Assets\sass\paper\plugins\_perfect-scrollbar.scss" />
     <Content Include="Assets\sass\paper\plugins\_sweetalert2.scss" />
+    <Content Include="Dashboard\Dashoboard.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

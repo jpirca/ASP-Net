@@ -166,7 +166,6 @@ C:\Users\693235\Downloads\TravelExpertsFront (1)\TravelExpertsFront\TravelExpert
 C:\Users\693235\Downloads\TravelExpertsFront (1)\TravelExpertsFront\TravelExpertsFront\obj\Debug\TravelExpertsFront.csproj.CopyComplete
 C:\Users\693235\Downloads\TravelExpertsFront (1)\TravelExpertsFront\TravelExpertsFront\obj\Debug\TravelExpertsFront.dll
 C:\Users\693235\Downloads\TravelExpertsFront (1)\TravelExpertsFront\TravelExpertsFront\obj\Debug\TravelExpertsFront.pdb
-C:\Users\693235\Desktop\ASP-Net\TravelExpertsFront\TravelExpertsFront\TravelExpertsFront\obj\Debug\TravelExpertsFront.csproj.CoreCompileInputs.cache
 C:\Users\693235\Desktop\ASP-Net\TravelExpertsFront\TravelExpertsFront\TravelExpertsFront\bin\TravelExpertsFront.dll.config
 C:\Users\693235\Desktop\ASP-Net\TravelExpertsFront\TravelExpertsFront\TravelExpertsFront\bin\TravelExpertsFront.dll
 C:\Users\693235\Desktop\ASP-Net\TravelExpertsFront\TravelExpertsFront\TravelExpertsFront\bin\TravelExpertsFront.pdb
@@ -218,6 +217,7 @@ C:\Users\693235\Desktop\ASP-Net\TravelExpertsFront\TravelExpertsFront\TravelExpe
 C:\Users\693235\Desktop\ASP-Net\TravelExpertsFront\TravelExpertsFront\TravelExpertsFront\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\693235\Desktop\ASP-Net\TravelExpertsFront\TravelExpertsFront\TravelExpertsFront\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\693235\Desktop\ASP-Net\TravelExpertsFront\TravelExpertsFront\TravelExpertsFront\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\693235\Desktop\ASP-Net\TravelExpertsFront\TravelExpertsFront\TravelExpertsFront\obj\Debug\TravelExpertsFront.csproj.CoreCompileInputs.cache
 C:\Users\693235\Desktop\ASP-Net\TravelExpertsFront\TravelExpertsFront\TravelExpertsFront\obj\Debug\TravelExpertsFront.csproj.CopyComplete
 C:\Users\693235\Desktop\ASP-Net\TravelExpertsFront\TravelExpertsFront\TravelExpertsFront\obj\Debug\TravelExpertsFront.dll
 C:\Users\693235\Desktop\ASP-Net\TravelExpertsFront\TravelExpertsFront\TravelExpertsFront\obj\Debug\TravelExpertsFront.pdb

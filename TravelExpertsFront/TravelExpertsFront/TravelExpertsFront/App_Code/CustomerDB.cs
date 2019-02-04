@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.IO;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Web;
 
 namespace TravelExpertsFront.App_Code
 {
@@ -21,20 +18,21 @@ namespace TravelExpertsFront.App_Code
             
             //Initialize all member variables of Customers Class
             bool custRegistered = false;
-            // SqlConnection connection = TravelExpertsConnectDB.GetConnection();
-            Customer custObj = new Customer();
-            custObj.CustFirstName = fName;
-            custObj.CustLastName = lName;
-            custObj.CustAddress = address;
-            custObj.CustCity = city;
-            custObj.CustProv = province;
-            custObj.CustPostal = postalcode;
-            custObj.CustCountry = country;
-            custObj.CustHomePhone = homephone;
-            custObj.CustBusPhone = businessphone;
-            custObj.Email = email;
-            custObj.CustLoginName = CustLoginName;
-            custObj.CustPassword = Encrypt(CustPassword);
+            Customer custObj = new Customer
+            {
+                CustFirstName = fName,
+                CustLastName = lName,
+                CustAddress = address,
+                CustCity = city,
+                CustProv = province,
+                CustPostal = postalcode,
+                CustCountry = country,
+                CustHomePhone = homephone,
+                CustBusPhone = businessphone,
+                Email = email,
+                CustLoginName = CustLoginName,
+                CustPassword = Encrypt(CustPassword)
+            };
 
             //Define the Insert query
             string query = "insert into Customers(CustFirstName,CustLastName,CustAddress,CustCity,CustProv" +
@@ -280,6 +278,64 @@ namespace TravelExpertsFront.App_Code
             }
         }
 
+        protected void logout(object sender, EventArgs e)
+        {
+           
+        }
+
+        public void getallCustomerInfoById(Customer custObj)
+        {
+
+            //Define the Insert query
+            string query = "SELECT[CustFirstName] ,[CustLastName] ,[CustAddress] ,[CustCity] ,[CustProv],[CustPostal],[CustCountry]"+
+                           ",[CustHomePhone] ,[CustBusPhone] ,[CustEmail],[AgentId],[CustLoginName],[CustPassword] FROM [Customers] WHERE [CustomerId] = "+custObj.CustomerID;
+
+
+            //Define the parameters
+            using (SqlConnection connection = new SqlConnection(TravelExpertsConnectDB.GetConnectionString()))
+            {
+                
+                SqlCommand cmd = new SqlCommand(query, connection);
+
+                try
+                {
+                    connection.Open();
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            custObj.CustFirstName = reader["CustFirstName"].ToString();
+                            custObj.CustLastName = reader["CustLastName"].ToString();
+                            custObj.CustAddress = reader["CustAddress"].ToString();
+                            custObj.CustCity = reader["CustCity"].ToString();
+                            custObj.CustPostal = reader["CustPostal"].ToString();
+                            custObj.CustProv = reader["CustProv"].ToString();
+                            custObj.CustCity = reader["CustCountry"].ToString();
+                            custObj.CustHomePhone = reader["CustHomePhone"].ToString();
+                            custObj.CustBusPhone = reader["CustBusPhone"].ToString();
+                            custObj.Email = reader["CustEmail"].ToString();
+                            custObj.CustLoginName = reader["CustLoginName"].ToString();
+                            custObj.AgentId = (reader["AgentId"] == DBNull.Value ? (int?)null : Convert.ToInt32(reader["AgentId"]));
+                        }
+                    }
+
+                    
+                }
+                catch (SqlException e)
+                {
+                    throw e;
+
+                }
+                finally
+                {
+                    connection.Close();
+
+                }
+            }
+        }
 
     }
 }

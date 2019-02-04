@@ -25,8 +25,10 @@ namespace TravelExpertsFront
             if (custDB.CustomerLogin(cust))
             {
                 //Redirect to dashboard
-                //Response.Redirect("~/dashboard.aspx");
-                lblErrorMessage.Text = "Login Successful";
+                Session["loggedin"] = true;
+                Session["CustID"] = cust.CustomerID;
+                Response.Redirect("~/dashboard/index.aspx");
+                
             }
             else
             {
